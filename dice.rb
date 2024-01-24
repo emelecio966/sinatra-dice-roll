@@ -2,6 +2,7 @@
 
 require "sinatra" 
 require "sinatra/reloader" 
+require "better_errors"
 
 get("/") do
   "Hello World"
