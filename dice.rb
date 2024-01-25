@@ -2,7 +2,7 @@
 
 require "sinatra" 
 require "sinatra/reloader" 
-require "better_errors"
+
 
 get("/") do
   "Hello World"
@@ -58,7 +58,7 @@ get("/dice/5/4") do
   five_die = rand(1..5) 
   sum = first_die + second_die + third_die + four_die + five_die 
 	
-  outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
+  outcome = "You rolled a #{first_die}, #{second_die}, #{third_die}, #{four_die} and a #{five_die} for a total of #{sum}."
 	
   "<h1>5d4</h1>
    <p>#{outcome}</p>"
