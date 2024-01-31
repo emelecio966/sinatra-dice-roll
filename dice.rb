@@ -17,49 +17,45 @@ get("/giraffe") do
 end
 
 get("/dice/2/6") do
-  first_die = rand(1..6)
-  second_die = rand(1..6)
-  sum = first_die + second_die
+  first_die6 = rand(1..6)
+  second_die6 = rand(1..6)
+  sum = first_die6 + second_die6
 	
-  outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
+  @outcome6 = "You rolled a #{first_die6} and a #{second_die6} for a total of #{sum6}."
 	
-  "<h1>2d6</h1>
-   <p>#{outcome}</p>"
+  erb(:two_six)
 end
 
 
 get("/dice/2/10") do
-  first_die = rand(1..10)
-  second_die = rand(1..10)
-  sum = first_die + second_die
+  first_die10 = rand(1..10)
+  second_die10 = rand(1..10)
+  sum = first_die10 + second_die10
 	
-  outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
+  @outcome10 = "You rolled a #{first_die10} and a #{second_die10} for a total of #{sum10}."
 	
-  "<h1>2d10</h1>
-   <p>#{outcome}</p>"
+  erb(:two_ten)
 end
 
 get("/dice/1/20") do
-  first_die = rand(1..20)
-  second_die = rand(1..20)
-  sum = first_die + second_die
+  first_die20 = rand(1..20)
+  second_die20 = rand(1..20)
+  sum = first_die20 + second_die20
 	
-  outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
+  @outcome20 = "You rolled a #{first_die20} and a #{second_die20} for a total of #{sum20}."
 	
-  "<h1>1d20</h1>
-   <p>#{outcome}</p>"
+  erb(:one_twenty) 
 end
  
 get("/dice/5/4") do
-  first_die = rand(1..5)
-  second_die = rand(1..5) 
-  third_die = rand(1..5)
-  four_die = rand(1..5)
-  five_die = rand(1..5) 
-  sum = first_die + second_die + third_die + four_die + five_die 
+  first_die4 = rand(1..5)
+  second_die4 = rand(1..5) 
+  third_die4 = rand(1..5)
+  four_die4 = rand(1..5)
+  five_die4 = rand(1..5) 
+  sum = first_die4 + second_die4 + third_die4 + four_die4 + five_die4
 	
-  outcome = "You rolled a #{first_die}, #{second_die}, #{third_die}, #{four_die} and a #{five_die} for a total of #{sum}."
+  @outcome4 = "You rolled a #{first_die4}, #{second_die4}, #{third_die4}, #{four_die4} and a #{five_die4} for a total of #{sum4}."
 	
-  "<h1>5d4</h1>
-   <p>#{outcome}</p>"
+  erb(:five_four)
 end
